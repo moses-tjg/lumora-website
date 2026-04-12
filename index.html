@@ -1,41 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lumora Keychain</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="animation.css">
-</head>
-
-<body>
-
-<a href="https://wa.me/6281234567890" class="wa-float">💬</a>
-
-<div class="navbar">
-  <img src="PP.jpeg" class="logo">
-</div>
-
-<section class="hero">
-  <div class="hero-text">
-    <h1>Lumora Keychain ✨</h1>
-    <p class="price">Only Rp16.000</p>
-
-    <p class="desc">
-      A cute and unique keychain made from shrink paper, customizable with your favorite design! Perfect for keys, bags, or as special gift for someone.
-    </p>
-
-    <a href="#order" class="cta-btn">Order Now</a>
-  </div>
-
-  <div class="hero-image">
-    <div class="glow-box">
-      <img src="Keychain.jpeg">
-    </div>
-  </div>
-</section>
-
 <section id="order" class="order-section">
   <h2>Order Your Lumora 💖</h2>
 
@@ -45,101 +7,71 @@
 
   <p class="total">Total: Rp <span id="total">16000</span></p>
 
-  <!-- NEW FEATURES -->
+  <!-- KEYCHAIN 1-4 -->
+  <h3>Choose Keychain (1–4)</h3>
+  <div class="option-grid">
+    <label>
+      <input type="radio" name="keychainA">
+      <img src="1.jpeg">
+      <span>Keychain 1</span>
+    </label>
+
+    <label>
+      <input type="radio" name="keychainA">
+      <img src="2.jpeg">
+      <span>Keychain 2</span>
+    </label>
+
+    <label>
+      <input type="radio" name="keychainA">
+      <img src="3.jpeg">
+      <span>Keychain 3</span>
+    </label>
+
+    <label>
+      <input type="radio" name="keychainA">
+      <img src="4.jpeg">
+      <span>Keychain 4</span>
+    </label>
+  </div>
+
+  <!-- KEYCHAIN 5-6 -->
+  <h3>Choose 1 (5–6)</h3>
+  <div class="option-grid">
+    <label>
+      <input type="radio" name="keychainB">
+      <img src="5.jpeg">
+      <span>Keychain 5</span>
+    </label>
+
+    <label>
+      <input type="radio" name="keychainB">
+      <img src="6.jpeg">
+      <span>Keychain 6</span>
+    </label>
+  </div>
+
+  <!-- ADD BEADS -->
+  <h3>Extras</h3>
+  <label class="checkbox">
+    <input type="checkbox"> Add Beads ✨
+  </label>
+
+  <!-- UPLOAD -->
   <label>Upload image for printable design:</label>
   <input type="file">
 
-  <label>Extras:</label>
-  <div class="checkbox-group">
-    <label><input type="checkbox"> Add manik-manik</label>
-  </div>
-
-  <label>Delivery:</label>
-  <div class="checkbox-group">
-    <label><input type="radio" name="delivery"> Delivered to SBH</label>
-    <label><input type="radio" name="delivery"> Delivered to NBH</label>
-  </div>
+  <!-- DELIVERY -->
+  <h3>Delivery</h3>
+  <label class="checkbox">
+    <input type="radio" name="delivery"> SBH
+  </label>
+  <label class="checkbox">
+    <input type="radio" name="delivery"> NBH
+  </label>
 
   <textarea placeholder="Custom design details"></textarea>
   <input type="text" placeholder="Your Contact (WA/IG)">
 
   <button class="submit-btn">Submit Order</button>
 </section>
-
-<section class="payment">
-  <h2>Payment Options 💳</h2>
-
-  <div class="payment-buttons">
-    <button onclick="toggleQRIS()">QRIS</button>
-    <button onclick="toggleBank()">Bank Transfer</button>
-    <button onclick="toggleCash()">Cash</button>
-  </div>
-
-  <div id="qris-box" class="payment-box">
-    <img src="qris.jpeg">
-  </div>
-
-  <div id="bank-box" class="payment-box">
-    <p>Please proceed to the contact person below:</p>
-    <p><a href="https://wa.me/628119440058">+62 811-9440-058 (Nay)</a></p>
-    <p><a href="https://wa.me/6281366276533">+62 813-6627-6533 (Agnes)</a></p>
-  </div>
-
-  <div id="cash-box" class="payment-box">
-    <p>Pay upon delivery</p>
-  </div>
-
-  <p class="payment-note">
-    For QRIS and bank transfer, please send proof of payment to the contact person.
-  </p>
-</section>
-
-<section class="contact">
-  <h2>Contact Us 📞</h2>
-
-  <div class="contact-links">
-    <a href="https://wa.me/6281234567890">WhatsApp</a>
-    <a href="https://www.instagram.com/lumoracharms.co?igsh=NGtrcGo1b2Zpc2gz" target="_blank">Instagram</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Lumora</p>
-</footer>
-
-<script>
-const price = 16000;
-
-function updateTotal() {
-  let qty = document.getElementById("qty").value;
-
-  if (qty < 1) qty = 1;
-
-  document.getElementById("qty").value = qty;
-  document.getElementById("total").innerText = qty * price;
-}
-
-function hideAll() {
-  document.getElementById("qris-box").style.display = "none";
-  document.getElementById("bank-box").style.display = "none";
-  document.getElementById("cash-box").style.display = "none";
-}
-
-function toggleQRIS() {
-  hideAll();
-  document.getElementById("qris-box").style.display = "block";
-}
-
-function toggleBank() {
-  hideAll();
-  document.getElementById("bank-box").style.display = "block";
-}
-
-function toggleCash() {
-  hideAll();
-  document.getElementById("cash-box").style.display = "block";
-}
-</script>
-
-</body>
-</html>
