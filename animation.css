@@ -48,7 +48,6 @@ body {
   text-decoration: none;
 }
 
-/* IMAGE */
 .hero-image {
   width: 40%;
   animation: slideIn 1s ease;
@@ -97,6 +96,61 @@ body {
   padding: 30px;
   background: white;
   border-radius: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* QRIS */
+.qris-card {
+  cursor: pointer;
+}
+
+.qris-card:hover {
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-10px); }
+  50% { transform: translateY(0); }
+  70% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.qris-box {
+  display: none;
+  margin-top: 20px;
+}
+
+.qris-box img {
+  width: 200px;
+  border-radius: 15px;
+}
+
+.qris-box.show {
+  display: block;
+}
+
+/* BANK */
+.bank-detail {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.bank-detail img {
+  width: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* NOTE */
+.payment-note {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 /* CONTACT */
@@ -110,7 +164,6 @@ body {
 }
 
 .contact-links a {
-  display: inline-block;
   margin: 10px;
   padding: 12px 20px;
   background: #ff4d6d;
@@ -119,7 +172,7 @@ body {
   text-decoration: none;
 }
 
-/* FLOAT WA */
+/* WA FLOAT */
 .wa-float {
   position: fixed;
   bottom: 20px;
