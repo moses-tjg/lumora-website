@@ -13,228 +13,192 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-/* BACKGROUND ATAS JADI PINK */
-body{
-  background:#ffd6e0;
-}
+body{background:#ffd6e0;}
 
 /* NAV */
-.navbar{
-  padding:20px;
-  background:#ffd6e0;
-}
-.logo{
-  width:60px;
-  border-radius:50%;
-}
+.navbar{padding:20px;background:#ffd6e0;}
+.logo{width:60px;border-radius:50%;}
 
 /* HERO */
 .hero{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:80px 60px;
-  background:url('background.jpg') center/cover no-repeat;
+display:flex;justify-content:space-between;align-items:center;
+padding:80px 60px;
+background:url('background.jpg') center/cover no-repeat;
 }
 
-/* TEXT JADI HITAM */
-.hero-text{
-  max-width:50%;
-  color:black;
-}
-
-.hero-text h1{
-  color:black;
-}
+/* TEXT */
+.hero-text{max-width:50%;color:black;}
 
 .price{
-  color:black;
-  font-size:1.5rem;
-  font-weight:bold;
-  margin:10px 0;
+color:black;
+font-size:1.5rem;
+font-weight:bold;
+margin:10px 0;
 }
 
+/* DETAIL JADI HIJAU */
 .desc{
-  color:black;
-  margin:25px 0;
-  line-height:1.6;
+color:#1faa59;
+margin:25px 0;
+line-height:1.6;
+font-weight:500;
 }
 
 .cta-btn{
-  margin-top:30px;
-  padding:12px 25px;
-  background:#ff4d6d;
-  color:white;
-  border-radius:30px;
-  text-decoration:none;
+margin-top:30px;
+padding:12px 25px;
+background:#ff4d6d;
+color:white;
+border-radius:30px;
+text-decoration:none;
 }
 
-/* RGB GLOW */
+/* RGB */
 @keyframes rgbGlow{
-  0%{box-shadow:0 0 15px red;}
-  25%{box-shadow:0 0 15px blue;}
-  50%{box-shadow:0 0 15px green;}
-  75%{box-shadow:0 0 15px purple;}
-  100%{box-shadow:0 0 15px red;}
+0%{box-shadow:0 0 15px red;}
+25%{box-shadow:0 0 15px blue;}
+50%{box-shadow:0 0 15px green;}
+75%{box-shadow:0 0 15px purple;}
+100%{box-shadow:0 0 15px red;}
 }
 
-.hero-image{
-  width:40%;
-}
-
-.glow-box{
-  padding:10px;
-  border-radius:20px;
-  animation:rgbGlow 3s infinite;
-}
-
-.hero-image img{
-  width:100%;
-  border-radius:15px;
-}
+.hero-image{width:40%;}
+.glow-box{padding:10px;border-radius:20px;animation:rgbGlow 3s infinite;}
+.hero-image img{width:100%;border-radius:15px;}
 
 /* ORDER */
 .order-section{
-  padding:80px 60px;
-  background:white;
-  border-radius:40px 40px 0 0;
-}
-
-.order-section h3{
-  margin-top:25px;
+padding:80px 60px;
+background:white;
+border-radius:40px 40px 0 0;
 }
 
 input,textarea{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border-radius:10px;
-  border:1px solid #ccc;
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ccc;
 }
 
 .total{
-  color:#ff4d6d;
-  font-weight:bold;
+color:#ff4d6d;
+font-weight:bold;
 }
 
 /* GRID */
 .option-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-  margin:20px 0;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin:20px 0;
 }
 
 .option-grid label{
-  background:#fff;
-  padding:10px;
-  border-radius:15px;
-  cursor:pointer;
+background:#fff;
+padding:10px;
+border-radius:15px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.option-grid label:hover{
+transform:scale(1.05);
 }
 
 .option-grid img{
-  width:100%;
-  border-radius:10px;
+width:100%;
+border-radius:10px;
 }
 
-.option-grid input{
-  display:none;
-}
+.option-grid input{display:none;}
 
 .option-grid input:checked + img{
-  outline:3px solid #ff4d6d;
+outline:3px solid #ff4d6d;
 }
 
 /* BUTTON */
 .submit-btn{
-  margin-top:20px;
-  padding:12px;
-  width:100%;
-  background:#ff4d6d;
-  color:white;
-  border:none;
-  border-radius:20px;
+margin-top:20px;
+padding:14px;
+width:100%;
+background:#1faa59;
+color:white;
+border:none;
+border-radius:25px;
+font-size:1rem;
+cursor:pointer;
+transition:0.3s;
+}
+
+.submit-btn:hover{
+background:#159947;
+transform:scale(1.03);
 }
 
 /* PAYMENT */
 .payment{
-  padding:80px 60px;
-  text-align:center;
+padding:80px 60px;
+text-align:center;
 }
 
 .payment-buttons button{
-  margin:10px;
-  padding:12px 25px;
-  background:#ff4d6d;
-  color:white;
-  border:none;
-  border-radius:25px;
+margin:10px;
+padding:12px 25px;
+background:#ff4d6d;
+color:white;
+border:none;
+border-radius:25px;
 }
 
 .payment-box{
-  display:none;
-  margin-top:20px;
+display:none;
+margin-top:20px;
 }
 
 .payment-box img{
-  width:200px;
+width:200px;
 }
 
-/* CONTACT (FIX JARAK) */
+/* CONTACT */
 .contact{
-  padding:120px 60px 100px 60px; /* ini yang bikin ga ketimpa */
-  text-align:center;
-}
-
-.contact h2{
-  margin-bottom:30px;
-}
-
-.contact-links{
-  margin-top:30px;
+padding:120px 60px;
+text-align:center;
 }
 
 .contact-links a{
-  margin:15px;
-  padding:12px 25px;
-  background:#ff4d6d;
-  color:white;
-  border-radius:25px;
-  text-decoration:none;
+margin:15px;
+padding:12px 25px;
+background:#ff4d6d;
+color:white;
+border-radius:25px;
+text-decoration:none;
 }
 
 /* FLOAT WA */
 .wa-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:10px;
-  border-radius:50%;
-  color:white;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:12px;
+border-radius:50%;
+color:white;
+font-size:18px;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-.hero{
-  flex-direction:column;
-  text-align:center;
-  padding:60px 20px;
-}
-.hero-text,.hero-image{
-  max-width:100%;
-}
-.order-section,.payment,.contact{
-  padding:60px 20px;
-}
+.hero{flex-direction:column;text-align:center;padding:60px 20px;}
+.hero-text,.hero-image{max-width:100%;}
+.order-section,.payment,.contact{padding:60px 20px;}
 }
 </style>
-
 </head>
 
 <body>
 
-<a href="https://wa.me/6281234567890" class="wa-float">💬</a>
+<a href="https://wa.me/628119440058" class="wa-float">💬</a>
 
 <div class="navbar">
 <img src="PP.jpeg" class="logo">
@@ -265,7 +229,7 @@ A cute and unique keychain made from shrink paper, customizable with your favori
 
 <h2>Order Your Lumora 💖</h2>
 
-<input type="text" placeholder="Your Name">
+<input type="text" id="name" placeholder="Your Name">
 
 <input type="number" id="qty" min="1" value="1" oninput="updateTotal()">
 
@@ -273,29 +237,22 @@ A cute and unique keychain made from shrink paper, customizable with your favori
 
 <h3>Choose Beads (1–4)</h3>
 <div class="option-grid">
-<label><input type="radio" name="b1"><img src="1.jpeg"></label>
-<label><input type="radio" name="b1"><img src="2.jpeg"></label>
-<label><input type="radio" name="b1"><img src="3.jpeg"></label>
-<label><input type="radio" name="b1"><img src="4.jpeg"></label>
+<label><input type="radio" name="b1" value="Beads 1"><img src="1.jpeg"></label>
+<label><input type="radio" name="b1" value="Beads 2"><img src="2.jpeg"></label>
+<label><input type="radio" name="b1" value="Beads 3"><img src="3.jpeg"></label>
+<label><input type="radio" name="b1" value="Beads 4"><img src="4.jpeg"></label>
 </div>
 
 <h3>Choose 1 (5–6)</h3>
 <div class="option-grid">
-<label><input type="radio" name="b2"><img src="5.jpeg"></label>
-<label><input type="radio" name="b2"><img src="6.jpeg"></label>
+<label><input type="radio" name="b2" value="Beads 5"><img src="5.jpeg"></label>
+<label><input type="radio" name="b2" value="Beads 6"><img src="6.jpeg"></label>
 </div>
 
-<label>Upload image for printable design</label>
-<input type="file">
+<textarea id="notes" placeholder="Custom design details"></textarea>
+<input type="text" id="contact" placeholder="Your Contact (WA/IG)">
 
-<h3>Delivery</h3>
-<label><input type="radio" name="delivery"> SBH</label>
-<label><input type="radio" name="delivery"> NBH</label>
-
-<textarea placeholder="Custom design details"></textarea>
-<input type="text" placeholder="Your Contact (WA/IG)">
-
-<button class="submit-btn">Submit Order</button>
+<button class="submit-btn" onclick="sendWA()">Order via WhatsApp 🚀</button>
 
 </section>
 
@@ -305,17 +262,11 @@ A cute and unique keychain made from shrink paper, customizable with your favori
 
 <div class="payment-buttons">
 <button onclick="toggleQRIS()">QRIS</button>
-<button onclick="toggleBank()">Bank Transfer</button>
 <button onclick="toggleCash()">Cash</button>
 </div>
 
 <div id="qris-box" class="payment-box">
 <img src="qris.jpeg">
-</div>
-
-<div id="bank-box" class="payment-box">
-<p><a href="https://wa.me/628119440058">Nay</a></p>
-<p><a href="https://wa.me/6281366276533">Agnes</a></p>
 </div>
 
 <div id="cash-box" class="payment-box">
@@ -325,14 +276,11 @@ A cute and unique keychain made from shrink paper, customizable with your favori
 </section>
 
 <section class="contact">
-
 <h2>Contact Us</h2>
-
 <div class="contact-links">
-<a href="https://wa.me/6281234567890">WhatsApp</a>
+<a href="https://wa.me/628119440058">WhatsApp</a>
 <a href="https://www.instagram.com/lumoracharms.co?igsh=NGtrcGo1b2Zpc2gz">Instagram</a>
 </div>
-
 </section>
 
 <script>
@@ -347,13 +295,41 @@ document.getElementById("total").innerText=qty*price;
 
 function hideAll(){
 document.getElementById("qris-box").style.display="none";
-document.getElementById("bank-box").style.display="none";
 document.getElementById("cash-box").style.display="none";
 }
 
 function toggleQRIS(){hideAll();document.getElementById("qris-box").style.display="block";}
-function toggleBank(){hideAll();document.getElementById("bank-box").style.display="block";}
 function toggleCash(){hideAll();document.getElementById("cash-box").style.display="block";}
+
+function sendWA(){
+let name=document.getElementById("name").value;
+let qty=document.getElementById("qty").value;
+let total=document.getElementById("total").innerText;
+let notes=document.getElementById("notes").value;
+let contact=document.getElementById("contact").value;
+
+let b1=document.querySelector('input[name="b1"]:checked');
+let b2=document.querySelector('input[name="b2"]:checked');
+
+b1=b1?b1.value:"-";
+b2=b2?b2.value:"-";
+
+let message=
+`✨ *ORDER LUMORA KEYCHAIN* ✨
+
+👤 Name: ${name}
+🔢 Qty: ${qty}
+💰 Total: Rp${total}
+
+🎀 Beads A: ${b1}
+🎀 Beads B: ${b2}
+
+📝 Notes: ${notes}
+📱 Contact: ${contact}`;
+
+let url=`https://wa.me/628119440058?text=${encodeURIComponent(message)}`;
+window.open(url,'_blank');
+}
 </script>
 
 </body>
