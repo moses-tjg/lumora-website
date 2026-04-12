@@ -7,7 +7,16 @@
 
 body {
   background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  padding: 20px;
+}
+
+.logo {
+  width: 60px;
+  border-radius: 50%;
 }
 
 /* HERO */
@@ -17,46 +26,32 @@ body {
   align-items: center;
   padding: 60px;
   min-height: 100vh;
-  backdrop-filter: blur(10px);
 }
 
 .hero-text {
   max-width: 50%;
 }
 
-.hero-text h1 {
-  font-size: 3rem;
-}
-
 .price {
-  font-size: 1.8rem;
   color: #ff4d6d;
   font-weight: bold;
-}
-
-.desc {
-  margin: 20px 0;
+  font-size: 1.5rem;
 }
 
 .cta-btn {
+  display: inline-block;
+  margin-top: 20px;
   padding: 12px 25px;
   background: #ff4d6d;
   color: white;
   border-radius: 30px;
   text-decoration: none;
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
 }
 
-.cta-btn:hover {
-  background: #ff1e4d;
-}
-
-/* HERO IMAGE */
+/* IMAGE */
 .hero-image {
   width: 40%;
-  animation: slideIn 1.2s ease;
+  animation: slideIn 1s ease;
 }
 
 .glow-box {
@@ -66,14 +61,9 @@ body {
   animation: glowMove 5s linear infinite;
 }
 
-.placeholder {
-  height: 300px;
-  background: white;
+.hero-image img {
+  width: 100%;
   border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
 }
 
 /* ORDER */
@@ -89,20 +79,6 @@ body {
   margin: 10px 0;
   padding: 12px;
   border-radius: 10px;
-  border: 1px solid #ccc;
-}
-
-.submit-btn {
-  margin-top: 10px;
-  padding: 12px;
-  background: #ff4d6d;
-  color: white;
-  border: none;
-  border-radius: 20px;
-}
-
-.submit-btn:hover {
-  background: #ff1e4d;
 }
 
 /* PAYMENT */
@@ -121,11 +97,6 @@ body {
   padding: 30px;
   background: white;
   border-radius: 20px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px) scale(1.05);
 }
 
 /* CONTACT */
@@ -134,56 +105,45 @@ body {
   text-align: center;
 }
 
+.contact-links {
+  margin-top: 20px;
+}
+
 .contact-links a {
+  display: inline-block;
   margin: 10px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   background: #ff4d6d;
   color: white;
   border-radius: 20px;
   text-decoration: none;
 }
 
-.contact-links a:hover {
-  background: #ff1e4d;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-}
-
-/* WHATSAPP FLOAT */
+/* FLOAT WA */
 .wa-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25D366;
-  color: white;
   padding: 15px;
   border-radius: 50%;
+  color: white;
   text-decoration: none;
 }
 
 /* ANIMATION */
 @keyframes slideIn {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes glowMove {
-  0% { filter: hue-rotate(0deg); }
+  0% { filter: hue-rotate(0); }
   100% { filter: hue-rotate(360deg); }
 }
 
-/* RESPONSIVE */
-@media(max-width: 768px) {
+/* MOBILE */
+@media(max-width:768px) {
   .hero {
     flex-direction: column;
     text-align: center;
