@@ -1,131 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lumora Keychain</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="animation.css">
-</head>
-
-<body>
-
-<a href="https://wa.me/6281234567890" class="wa-float">💬</a>
-
-<div class="navbar">
-  <img src="PP.jpeg" class="logo">
-</div>
-
-<section class="hero">
-  <div class="hero-text">
-    <h1>Lumora Keychain ✨</h1>
-    <p class="price">Only Rp16.000</p>
-
-    <p class="desc">
-      A cute and unique keychain made from shrink paper, customizable with your favorite design! Perfect for keys, bags, or as special gift for someone.
-    </p>
-
-    <a href="#order" class="cta-btn">Order Now</a>
-  </div>
-
-  <div class="hero-image">
-    <div class="glow-box">
-      <img src="Keychain.jpeg">
-    </div>
-  </div>
-</section>
-
-<section id="order" class="order-section">
-  <h2>Order Your Lumora 💖</h2>
-
-  <input type="text" placeholder="Your Name">
-
-  <input type="number" id="qty" min="1" value="1" oninput="updateTotal()">
-
-  <!-- TOTAL -->
-  <p class="total">Total: Rp <span id="total">16000</span></p>
-
-  <textarea placeholder="Custom design details"></textarea>
-  <input type="text" placeholder="Your Contact (WA/IG)">
-
-  <button class="submit-btn">Submit Order</button>
-</section>
-
-<section class="payment">
-  <h2>Payment Options 💳</h2>
-
-  <div class="payment-buttons">
-    <button onclick="toggleQRIS()">QRIS</button>
-    <button onclick="toggleBank()">Bank Transfer</button>
-    <button onclick="toggleCash()">Cash</button>
-  </div>
-
-  <div id="qris-box" class="payment-box">
-    <img src="qris.jpeg">
-  </div>
-
-  <div id="bank-box" class="payment-box">
-    <p>Please proceed to the contact person below:</p>
-    <p><a href="https://wa.me/628119440058">+62 811-9440-058 (Nay)</a></p>
-    <p><a href="https://wa.me/6281366276533">+62 813-6627-6533 (Agnes)</a></p>
-  </div>
-
-  <div id="cash-box" class="payment-box">
-    <p>Pay upon delivery</p>
-  </div>
-
-  <p class="payment-note">
-    For QRIS and bank transfer, please send proof of payment to the contact person.
-  </p>
-</section>
-
-<section class="contact">
-  <h2>Contact Us 📞</h2>
-
-  <div class="contact-links">
-    <a href="https://wa.me/6281234567890">WhatsApp</a>
-    <a href="https://www.instagram.com/lumoracharms.co?igsh=NGtrcGo1b2Zpc2gz" target="_blank">Instagram</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Lumora</p>
-</footer>
-
-<script>
-const price = 16000;
-
-function updateTotal() {
-  let qty = document.getElementById("qty").value;
-
-  if (qty < 1) qty = 1;
-
-  document.getElementById("qty").value = qty;
-  document.getElementById("total").innerText = qty * price;
+/* HERO TEXT FIX */
+.desc {
+  margin: 25px 0;
+  line-height: 1.6;
 }
 
-function hideAll() {
-  document.getElementById("qris-box").style.display = "none";
-  document.getElementById("bank-box").style.display = "none";
-  document.getElementById("cash-box").style.display = "none";
+.cta-btn {
+  margin-top: 25px;
 }
 
-function toggleQRIS() {
-  hideAll();
-  document.getElementById("qris-box").style.display = "block";
+/* CONTACT SECTION FIX */
+.contact {
+  padding: 80px 60px; /* lebih lega ke atas */
 }
 
-function toggleBank() {
-  hideAll();
-  document.getElementById("bank-box").style.display = "block";
+.contact h2 {
+  margin-bottom: 25px; /* jarak judul ke tombol */
 }
 
-function toggleCash() {
-  hideAll();
-  document.getElementById("cash-box").style.display = "block";
+.contact-links {
+  margin-top: 20px;
 }
-</script>
 
-</body>
-</html>
+.contact-links a {
+  margin: 15px; /* jarak antar WA & IG */
+  display: inline-block;
+}
