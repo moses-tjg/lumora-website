@@ -8,216 +8,60 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-
-body {
-  background: linear-gradient(135deg,#ff9a9e,#fad0c4);
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:linear-gradient(135deg,#ff9a9e,#fad0c4);}
 
 /* NAV */
-.navbar {
-  padding:20px;
-}
-
-.logo {
-  width:60px;
-  border-radius:50%;
-}
+.navbar{padding:20px;}
+.logo{width:60px;border-radius:50%;}
 
 /* HERO */
-.hero {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:80px 60px;
-}
-
-.hero-text {
-  max-width:50%;
-}
-
-.price {
-  color:#ff4d6d;
-  font-size:1.5rem;
-  margin:10px 0;
-  font-weight:bold;
-}
-
-.desc {
-  margin:25px 0;
-  line-height:1.6;
-}
-
-.cta-btn {
-  margin-top:30px;
-  padding:12px 25px;
-  background:#ff4d6d;
-  color:white;
-  border-radius:30px;
-  text-decoration:none;
-  display:inline-block;
-}
-
-.hero-image {
-  width:40%;
-}
-
-.glow-box {
-  padding:10px;
-  border-radius:20px;
-  background: linear-gradient(45deg,#ff4d6d,#7b2ff7,#00c6ff);
-}
-
-.hero-image img {
-  width:100%;
-  border-radius:15px;
-}
+.hero{display:flex;justify-content:space-between;align-items:center;padding:80px 60px;}
+.hero-text{max-width:50%;}
+.price{color:#ff4d6d;font-size:1.5rem;font-weight:bold;margin:10px 0;}
+.desc{margin:25px 0;line-height:1.6;}
+.cta-btn{margin-top:30px;padding:12px 25px;background:#ff4d6d;color:white;border-radius:30px;text-decoration:none;display:inline-block;}
+.hero-image{width:40%;}
+.glow-box{padding:10px;border-radius:20px;background:linear-gradient(45deg,#ff4d6d,#7b2ff7,#00c6ff);}
+.hero-image img{width:100%;border-radius:15px;}
 
 /* ORDER */
-.order-section {
-  padding:70px 60px;
-  background:white;
-  border-radius:40px 40px 0 0;
-}
+.order-section{padding:70px 60px;background:white;border-radius:40px 40px 0 0;}
+.order-section h2{margin-bottom:20px;}
+.order-section h3{margin-top:25px;margin-bottom:10px;}
+input,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;border:1px solid #ccc;}
+.total{color:#ff4d6d;font-weight:bold;}
 
-.order-section h2 {
-  margin-bottom:20px;
-}
+/* GRID */
+.option-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin:20px 0;}
+.option-grid label{background:#fff;padding:10px;border-radius:15px;text-align:center;cursor:pointer;}
+.option-grid img{width:100%;border-radius:10px;margin-bottom:5px;}
+.option-grid input{display:none;}
+.option-grid input:checked + img{outline:3px solid #ff4d6d;}
 
-.order-section h3 {
-  margin-top:25px;
-}
+.checkbox{display:block;margin:10px 0;}
 
-input, textarea {
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border-radius:10px;
-  border:1px solid #ccc;
-}
-
-.total {
-  color:#ff4d6d;
-  font-weight:bold;
-}
-
-/* OPTION GRID */
-.option-grid {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-  margin:20px 0;
-}
-
-.option-grid label {
-  background:#fff;
-  padding:10px;
-  border-radius:15px;
-  text-align:center;
-  cursor:pointer;
-  border:2px solid transparent;
-  transition:0.3s;
-}
-
-.option-grid img {
-  width:100%;
-  border-radius:10px;
-  margin-bottom:5px;
-}
-
-.option-grid input {
-  display:none;
-}
-
-.option-grid input:checked + img {
-  outline:3px solid #ff4d6d;
-}
-
-.checkbox {
-  display:block;
-  margin:10px 0;
-}
-
-.submit-btn {
-  margin-top:15px;
-  padding:12px;
-  background:#ff4d6d;
-  color:white;
-  border:none;
-  border-radius:20px;
-}
+.submit-btn{margin-top:20px;padding:12px;width:100%;background:#ff4d6d;color:white;border:none;border-radius:20px;}
 
 /* PAYMENT */
-.payment {
-  padding:70px;
-  text-align:center;
-}
-
-.payment-buttons button {
-  margin:10px;
-  padding:12px 25px;
-  background:#ff4d6d;
-  color:white;
-  border:none;
-  border-radius:25px;
-  cursor:pointer;
-}
-
-.payment-box {
-  display:none;
-  margin-top:20px;
-}
-
-.payment-box img {
-  width:200px;
-}
-
-.payment-note {
-  margin-top:20px;
-  font-size:0.9rem;
-}
+.payment{padding:70px;text-align:center;}
+.payment-buttons button{margin:10px;padding:12px 25px;background:#ff4d6d;color:white;border:none;border-radius:25px;cursor:pointer;}
+.payment-box{display:none;margin-top:20px;}
+.payment-box img{width:200px;}
+.payment-note{margin-top:20px;font-size:0.9rem;}
 
 /* CONTACT */
-.contact {
-  padding:90px 60px;
-  text-align:center;
-}
-
-.contact-links a {
-  margin:15px;
-  padding:12px 25px;
-  background:#ff4d6d;
-  color:white;
-  border-radius:25px;
-  text-decoration:none;
-}
+.contact{padding:90px 60px;text-align:center;}
+.contact-links a{margin:15px;padding:12px 25px;background:#ff4d6d;color:white;border-radius:25px;text-decoration:none;}
 
 /* FLOAT WA */
-.wa-float {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:10px;
-  border-radius:50%;
-  color:white;
-}
+.wa-float{position:fixed;bottom:20px;right:20px;background:#25D366;padding:10px;border-radius:50%;color:white;}
 
 /* MOBILE */
 @media(max-width:768px){
-  .hero {
-    flex-direction:column;
-    text-align:center;
-    padding:60px 20px;
-  }
-  .hero-text,.hero-image {
-    max-width:100%;
-  }
+.hero{flex-direction:column;text-align:center;padding:60px 20px;}
+.hero-text,.hero-image{max-width:100%;}
+.order-section,.payment,.contact{padding:60px 20px;}
 }
 </style>
 
@@ -228,26 +72,24 @@ input, textarea {
 <a href="https://wa.me/6281234567890" class="wa-float">💬</a>
 
 <div class="navbar">
-  <img src="PP.jpeg" class="logo">
+<img src="PP.jpeg" class="logo">
 </div>
 
 <section class="hero">
-  <div class="hero-text">
-    <h1>Lumora Keychain ✨</h1>
-    <p class="price">Rp16.000</p>
+<div class="hero-text">
+<h1>Lumora Keychain ✨</h1>
+<p class="price">Rp16.000</p>
+<p class="desc">
+A cute and unique keychain made from shrink paper, customizable with your favorite design! Perfect for keys, bags, or as special gift for someone.
+</p>
+<a href="#order" class="cta-btn">Order Now</a>
+</div>
 
-    <p class="desc">
-      A cute and unique keychain made from shrink paper, customizable with your favorite design! Perfect for keys, bags, or as special gift for someone.
-    </p>
-
-    <a href="#order" class="cta-btn">Order Now</a>
-  </div>
-
-  <div class="hero-image">
-    <div class="glow-box">
-      <img src="Keychain.jpeg">
-    </div>
-  </div>
+<div class="hero-image">
+<div class="glow-box">
+<img src="Keychain.jpeg">
+</div>
+</div>
 </section>
 
 <section id="order" class="order-section">
@@ -260,22 +102,19 @@ input, textarea {
 
 <p class="total">Total: Rp <span id="total">16000</span></p>
 
-<h3>Choose Keychain (1–4)</h3>
+<h3>Choose Beads (1–4)</h3>
 <div class="option-grid">
-<label><input type="radio" name="k1"><img src="1.jpeg"><span>1</span></label>
-<label><input type="radio" name="k1"><img src="2.jpeg"><span>2</span></label>
-<label><input type="radio" name="k1"><img src="3.jpeg"><span>3</span></label>
-<label><input type="radio" name="k1"><img src="4.jpeg"><span>4</span></label>
+<label><input type="radio" name="b1"><img src="1.jpeg"></label>
+<label><input type="radio" name="b1"><img src="2.jpeg"></label>
+<label><input type="radio" name="b1"><img src="3.jpeg"></label>
+<label><input type="radio" name="b1"><img src="4.jpeg"></label>
 </div>
 
 <h3>Choose 1 (5–6)</h3>
 <div class="option-grid">
-<label><input type="radio" name="k2"><img src="5.jpeg"><span>5</span></label>
-<label><input type="radio" name="k2"><img src="6.jpeg"><span>6</span></label>
+<label><input type="radio" name="b2"><img src="5.jpeg"></label>
+<label><input type="radio" name="b2"><img src="6.jpeg"></label>
 </div>
-
-<h3>Extras</h3>
-<label class="checkbox"><input type="checkbox"> Add Beads ✨</label>
 
 <label>Upload image for printable design</label>
 <input type="file">
@@ -321,7 +160,6 @@ Send proof for QRIS & Bank Transfer
 
 <section class="contact">
 <h2>Contact Us</h2>
-
 <div class="contact-links">
 <a href="https://wa.me/6281234567890">WhatsApp</a>
 <a href="https://www.instagram.com/lumoracharms.co?igsh=NGtrcGo1b2Zpc2gz">Instagram</a>
@@ -329,7 +167,7 @@ Send proof for QRIS & Bank Transfer
 </section>
 
 <script>
-const price = 16000;
+const price=16000;
 
 function updateTotal(){
 let qty=document.getElementById("qty").value;
