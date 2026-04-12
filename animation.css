@@ -24,31 +24,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 60px;
+  padding: 60px;
 }
 
 .hero-text {
   max-width: 50%;
 }
 
-.hero-text h1 {
-  margin-bottom: 15px;
-}
-
 .price {
   color: #ff4d6d;
   font-weight: bold;
   font-size: 1.5rem;
-  margin-bottom: 15px;
 }
 
-/* FIX DESKRIPSI BIAR GA NIMPA */
 .desc {
-  margin: 25px 0;
-  line-height: 1.6;
+  margin: 20px 0;
 }
 
-/* FIX BUTTON JARAK */
 .cta-btn {
   display: inline-block;
   margin-top: 30px;
@@ -77,22 +69,17 @@ body {
 
 /* ORDER */
 .order-section {
-  padding: 70px 60px;
+  padding: 60px;
   background: white;
   border-radius: 40px 40px 0 0;
-}
-
-.order-section h2 {
-  margin-bottom: 20px;
 }
 
 .order-section input,
 .order-section textarea {
   width: 100%;
-  margin: 12px 0;
+  margin: 10px 0;
   padding: 12px;
   border-radius: 10px;
-  border: 1px solid #ccc;
 }
 
 .total {
@@ -103,79 +90,45 @@ body {
 
 /* PAYMENT */
 .payment {
-  padding: 70px 60px;
+  padding: 60px;
   text-align: center;
 }
 
-.payment h2 {
-  margin-bottom: 20px;
-}
-
 .payment-buttons button {
-  margin: 12px;
-  padding: 12px 25px;
+  margin: 10px;
+  padding: 10px 20px;
   background: #ff4d6d;
   color: white;
-  border-radius: 25px;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.payment-buttons button:hover {
-  background: #ff1e4d;
-  transform: scale(1.05);
-}
-
-/* PAYMENT BOX */
 .payment-box {
   display: none;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .payment-box img {
   width: 200px;
-  border-radius: 10px;
 }
 
-/* NOTE */
-.payment-note {
-  margin-top: 25px;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* CONTACT FIX TOTAL */
+/* CONTACT */
 .contact {
-  padding: 90px 60px; /* lebih tinggi biar ga nempel */
+  padding: 60px;
   text-align: center;
 }
 
-.contact h2 {
-  margin-bottom: 30px;
-}
-
-/* FIX JARAK BUTTON */
-.contact-links {
-  margin-top: 25px;
-}
-
 .contact-links a {
-  margin: 15px;
-  padding: 12px 25px;
+  margin: 10px;
+  padding: 10px 20px;
   background: #ff4d6d;
   color: white;
-  border-radius: 25px;
+  border-radius: 20px;
   text-decoration: none;
-  display: inline-block;
-  transition: 0.3s;
 }
 
-.contact-links a:hover {
-  background: #ff1e4d;
-}
-
-/* FLOAT WA */
+/* WA FLOAT */
 .wa-float {
   position: fixed;
   bottom: 20px;
@@ -184,7 +137,6 @@ body {
   padding: 10px;
   border-radius: 50%;
   color: white;
-  font-size: 16px;
 }
 
 /* MOBILE */
@@ -192,16 +144,9 @@ body {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 60px 20px;
   }
 
   .hero-text, .hero-image {
     max-width: 100%;
-  }
-
-  .order-section,
-  .payment,
-  .contact {
-    padding: 60px 20px;
   }
 }
