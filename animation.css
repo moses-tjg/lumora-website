@@ -37,8 +37,13 @@ body {
   font-size: 1.5rem;
 }
 
+.desc {
+  margin: 20px 0;
+}
+
 .cta-btn {
-  margin-top: 20px;
+  display: inline-block;
+  margin-top: 30px;
   padding: 12px 25px;
   background: #ff4d6d;
   color: white;
@@ -77,13 +82,18 @@ body {
   border-radius: 10px;
 }
 
+.total {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #ff4d6d;
+}
+
 /* PAYMENT */
 .payment {
   padding: 60px;
   text-align: center;
 }
 
-/* SAME STYLE AS CONTACT BUTTON */
 .payment-buttons button {
   margin: 10px;
   padding: 10px 20px;
@@ -91,15 +101,9 @@ body {
   color: white;
   border-radius: 20px;
   border: none;
-  text-decoration: none;
   cursor: pointer;
 }
 
-.payment-buttons button:hover {
-  background: #ff1e4d;
-}
-
-/* PAYMENT BOX */
 .payment-box {
   display: none;
   margin-top: 20px;
@@ -107,13 +111,6 @@ body {
 
 .payment-box img {
   width: 200px;
-  border-radius: 10px;
-}
-
-/* NOTE */
-.payment-note {
-  margin-top: 20px;
-  font-size: 0.9rem;
 }
 
 /* CONTACT */
@@ -131,11 +128,7 @@ body {
   text-decoration: none;
 }
 
-.contact-links a:hover {
-  background: #ff1e4d;
-}
-
-/* FLOAT WA */
+/* WA FLOAT */
 .wa-float {
   position: fixed;
   bottom: 20px;
@@ -143,7 +136,6 @@ body {
   background: #25D366;
   padding: 10px;
   border-radius: 50%;
-  font-size: 16px;
   color: white;
 }
 
