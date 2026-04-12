@@ -1,27 +1,207 @@
-/* HERO TEXT FIX */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+/* NAVBAR */
+.navbar {
+  padding: 20px;
+}
+
+.logo {
+  width: 60px;
+  border-radius: 50%;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  margin-bottom: 15px;
+}
+
+.price {
+  color: #ff4d6d;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* FIX DESKRIPSI BIAR GA NIMPA */
 .desc {
   margin: 25px 0;
   line-height: 1.6;
 }
 
+/* FIX BUTTON JARAK */
 .cta-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* IMAGE */
+.hero-image {
+  width: 40%;
+}
+
+.glow-box {
+  padding: 10px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #ff4d6d, #7b2ff7, #00c6ff);
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* ORDER */
+.order-section {
+  padding: 70px 60px;
+  background: white;
+  border-radius: 40px 40px 0 0;
+}
+
+.order-section h2 {
+  margin-bottom: 20px;
+}
+
+.order-section input,
+.order-section textarea {
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.total {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #ff4d6d;
+}
+
+/* PAYMENT */
+.payment {
+  padding: 70px 60px;
+  text-align: center;
+}
+
+.payment h2 {
+  margin-bottom: 20px;
+}
+
+.payment-buttons button {
+  margin: 12px;
+  padding: 12px 25px;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.payment-buttons button:hover {
+  background: #ff1e4d;
+  transform: scale(1.05);
+}
+
+/* PAYMENT BOX */
+.payment-box {
+  display: none;
   margin-top: 25px;
 }
 
-/* CONTACT SECTION FIX */
+.payment-box img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+/* NOTE */
+.payment-note {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* CONTACT FIX TOTAL */
 .contact {
-  padding: 80px 60px; /* lebih lega ke atas */
+  padding: 90px 60px; /* lebih tinggi biar ga nempel */
+  text-align: center;
 }
 
 .contact h2 {
-  margin-bottom: 25px; /* jarak judul ke tombol */
+  margin-bottom: 30px;
 }
 
+/* FIX JARAK BUTTON */
 .contact-links {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .contact-links a {
-  margin: 15px; /* jarak antar WA & IG */
+  margin: 15px;
+  padding: 12px 25px;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
   display: inline-block;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  background: #ff1e4d;
+}
+
+/* FLOAT WA */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hero-text, .hero-image {
+    max-width: 100%;
+  }
+
+  .order-section,
+  .payment,
+  .contact {
+    padding: 60px 20px;
+  }
 }
