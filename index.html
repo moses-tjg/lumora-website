@@ -11,22 +11,21 @@
 
 <body>
 
-<!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/6281234567890" class="wa-float">💬</a>
 
-<!-- NAVBAR -->
 <div class="navbar">
   <img src="PP.jpeg" class="logo">
 </div>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-text">
     <h1>Lumora Keychain ✨</h1>
     <p class="price">Only Rp16.000</p>
+
     <p class="desc">
       A cute and unique keychain made from shrink paper, customizable with your favorite design! Perfect for keys, bags, or as special gift for someone.
     </p>
+
     <a href="#order" class="cta-btn">Order Now</a>
   </div>
 
@@ -37,19 +36,22 @@
   </div>
 </section>
 
-<!-- ORDER -->
 <section id="order" class="order-section">
   <h2>Order Your Lumora 💖</h2>
 
   <input type="text" placeholder="Your Name">
-  <input type="number" placeholder="Quantity">
+
+  <input type="number" id="qty" min="1" value="1" oninput="updateTotal()">
+
+  <!-- TOTAL -->
+  <p class="total">Total: Rp <span id="total">16000</span></p>
+
   <textarea placeholder="Custom design details"></textarea>
   <input type="text" placeholder="Your Contact (WA/IG)">
 
   <button class="submit-btn">Submit Order</button>
 </section>
 
-<!-- PAYMENT -->
 <section class="payment">
   <h2>Payment Options 💳</h2>
 
@@ -59,37 +61,25 @@
     <button onclick="toggleCash()">Cash</button>
   </div>
 
-  <!-- QRIS -->
   <div id="qris-box" class="payment-box">
     <img src="qris.jpeg">
   </div>
 
-  <!-- BANK -->
   <div id="bank-box" class="payment-box">
     <p>Please proceed to the contact person below:</p>
-
-    <p>
-      <a href="https://wa.me/628119440058">+62 811-9440-058 (Nay)</a>
-    </p>
-
-    <p>
-      <a href="https://wa.me/6281366276533">+62 813-6627-6533 (Agnes)</a>
-    </p>
+    <p><a href="https://wa.me/628119440058">+62 811-9440-058 (Nay)</a></p>
+    <p><a href="https://wa.me/6281366276533">+62 813-6627-6533 (Agnes)</a></p>
   </div>
 
-  <!-- CASH -->
   <div id="cash-box" class="payment-box">
     <p>Pay upon delivery</p>
   </div>
 
-  <!-- NOTE -->
   <p class="payment-note">
     For QRIS and bank transfer, please send proof of payment to the contact person.
   </p>
-
 </section>
 
-<!-- CONTACT -->
 <section class="contact">
   <h2>Contact Us 📞</h2>
 
@@ -104,6 +94,17 @@
 </footer>
 
 <script>
+const price = 16000;
+
+function updateTotal() {
+  let qty = document.getElementById("qty").value;
+
+  if (qty < 1) qty = 1;
+
+  document.getElementById("qty").value = qty;
+  document.getElementById("total").innerText = qty * price;
+}
+
 function hideAll() {
   document.getElementById("qris-box").style.display = "none";
   document.getElementById("bank-box").style.display = "none";
