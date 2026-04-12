@@ -14,7 +14,7 @@
 <!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/6281234567890" class="wa-float">💬</a>
 
-<!-- NAV / LOGO -->
+<!-- NAVBAR -->
 <div class="navbar">
   <img src="PP.jpeg" class="logo">
 </div>
@@ -54,10 +54,37 @@
   <h2>Payment Options 💳</h2>
 
   <div class="payment-cards">
-    <div class="card">QRIS<br><span>Scan & Pay</span></div>
-    <div class="card">Bank Transfer<br><span>BCA / Mandiri</span></div>
-    <div class="card">Cash<br><span>Meet-up</span></div>
+    <div class="card qris-card" onclick="toggleQRIS()">
+      QRIS<br><span>Tap to view</span>
+    </div>
+
+    <div class="card">
+      Bank Transfer<br>
+      <span>Please proceed to the contact person below</span>
+
+      <p class="bank-detail">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+        +62 811-9440-058 Nay<br>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+        +62 813-6627-6533 Agnes
+      </p>
+    </div>
+
+    <div class="card">
+      Cash<br><span>Pay upon delivery</span>
+    </div>
   </div>
+
+  <!-- QRIS IMAGE -->
+  <div id="qris-box" class="qris-box">
+    <img src="qris.jpeg" alt="QRIS Payment">
+  </div>
+
+  <!-- NOTE -->
+  <p class="payment-note">
+    For QRIS and bank transfer, please send proof of payment to the contact person.
+  </p>
 </section>
 
 <!-- CONTACT -->
@@ -73,6 +100,14 @@
 <footer>
   <p>© 2026 Lumora</p>
 </footer>
+
+<!-- SCRIPT -->
+<script>
+function toggleQRIS() {
+  const box = document.getElementById("qris-box");
+  box.classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
