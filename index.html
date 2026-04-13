@@ -11,6 +11,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
 body{background:#ffd6e0;}
 
 /* NAV */
@@ -19,21 +20,38 @@ body{background:#ffd6e0;}
 
 /* HERO */
 .hero{
-display:flex;justify-content:space-between;align-items:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
 padding:80px 60px;
 background:url('background.jpg') center/cover no-repeat;
 }
 
 .hero-text{max-width:50%;color:black;}
-.price{color:black;font-size:1.5rem;font-weight:bold;margin:10px 0;}
-.desc{color:black;font-weight:600;margin:25px 0;line-height:1.6;}
 
-.cta-btn{
-margin-top:30px;padding:12px 25px;background:#ff4d6d;
-color:white;border-radius:30px;text-decoration:none;
+.price{
+font-size:1.5rem;
+font-weight:bold;
+margin:10px 0;
 }
 
-/* ANIMASI SLIDE */
+.desc{
+color:black;
+font-weight:600;
+margin:25px 0;
+line-height:1.6;
+}
+
+.cta-btn{
+margin-top:30px;
+padding:12px 25px;
+background:#ff4d6d;
+color:white;
+border-radius:30px;
+text-decoration:none;
+}
+
+/* SLIDE */
 @keyframes slideInRight{
 0%{transform:translateX(100%);opacity:0;}
 100%{transform:translateX(0);opacity:1;}
@@ -54,42 +72,71 @@ animation:slideInRight 1s ease-out;
 }
 
 .glow-box{
-padding:10px;border-radius:20px;
+padding:10px;
+border-radius:20px;
 animation:rgbGlow 3s infinite;
 }
 
-.hero-image img{width:100%;border-radius:15px;}
+.hero-image img{
+width:100%;
+border-radius:15px;
+}
 
 /* ORDER */
 .order-section{
-padding:80px 60px;background:white;border-radius:40px 40px 0 0;
+padding:80px 60px;
+background:white;
+border-radius:40px 40px 0 0;
 }
 
 input,textarea{
-width:100%;padding:12px;margin:10px 0;
-border-radius:10px;border:1px solid #ccc;
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ccc;
 }
 
-.total{color:#ff4d6d;font-weight:bold;}
+.total{
+color:#ff4d6d;
+font-weight:bold;
+}
 
 /* GRID */
 .option-grid{
-display:grid;grid-template-columns:repeat(2,1fr);
-gap:15px;margin:20px 0;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin:20px 0;
 }
 
 .option-grid label{
-background:#fff;padding:10px;border-radius:15px;cursor:pointer;
+background:#fff;
+padding:10px;
+border-radius:15px;
+cursor:pointer;
 }
 
-.option-grid img{width:100%;border-radius:10px;}
+.option-grid img{
+width:100%;
+border-radius:10px;
+}
+
 .option-grid input{display:none;}
-.option-grid input:checked + img{outline:3px solid #ff4d6d;}
+
+.option-grid input:checked + img{
+outline:3px solid #ff4d6d;
+}
 
 /* BUTTON */
 .submit-btn{
-margin-top:20px;padding:14px;width:100%;
-background:#1faa59;color:white;border:none;border-radius:25px;
+margin-top:20px;
+padding:14px;
+width:100%;
+background:#1faa59;
+color:white;
+border:none;
+border-radius:25px;
 }
 
 /* PAYMENT */
@@ -107,36 +154,41 @@ color:white;
 border:none;
 border-radius:25px;
 cursor:pointer;
-transition:0.3s;
 }
 
-.payment-buttons button:hover{
-transform:scale(1.05);
-}
-
-.payment-box{
-display:none;
-margin-top:20px;
-}
-
-.payment-box img{
-width:200px;
-border-radius:10px;
-}
-
-/* CONTACT */
+/* CONTACT NEXT LEVEL */
 .contact{
-padding:150px 60px 120px 60px;
+padding:150px 60px 120px;
 text-align:center;
 }
 
+.contact h2{
+font-size:2rem;
+margin-bottom:40px;
+}
+
+.contact-links{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
 .contact-links a{
-margin:15px;
+display:flex;
+align-items:center;
+gap:10px;
 padding:12px 25px;
 background:#ff4d6d;
 color:white;
-border-radius:25px;
+border-radius:30px;
 text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.contact-links a:hover{
+transform:scale(1.05);
 }
 
 /* FLOAT WA */
@@ -152,11 +204,20 @@ color:white;
 
 /* MOBILE */
 @media(max-width:768px){
-.hero{flex-direction:column;text-align:center;padding:60px 20px;}
-.hero-text,.hero-image{max-width:100%;}
-.order-section,.payment,.contact{padding:60px 20px;}
+.hero{
+flex-direction:column;
+text-align:center;
+padding:60px 20px;
+}
+.hero-text,.hero-image{
+max-width:100%;
+}
+.order-section,.payment,.contact{
+padding:60px 20px;
+}
 }
 </style>
+
 </head>
 
 <body>
@@ -197,20 +258,6 @@ A cute and unique keychain made from shrink paper, customizable with your favori
 
 <p class="total">Total: Rp <span id="total">16000</span></p>
 
-<h3>Choose Beads (1–4)</h3>
-<div class="option-grid">
-<label><input type="radio" name="b1" value="Beads 1"><img src="1.jpeg"></label>
-<label><input type="radio" name="b1" value="Beads 2"><img src="2.jpeg"></label>
-<label><input type="radio" name="b1" value="Beads 3"><img src="3.jpeg"></label>
-<label><input type="radio" name="b1" value="Beads 4"><img src="4.jpeg"></label>
-</div>
-
-<h3>Choose 1 (5–6)</h3>
-<div class="option-grid">
-<label><input type="radio" name="b2" value="Beads 5"><img src="5.jpeg"></label>
-<label><input type="radio" name="b2" value="Beads 6"><img src="6.jpeg"></label>
-</div>
-
 <textarea id="notes" placeholder="Custom design details"></textarea>
 <input type="text" id="contact" placeholder="Your Contact (WA/IG)">
 
@@ -218,7 +265,6 @@ A cute and unique keychain made from shrink paper, customizable with your favori
 
 </section>
 
-<!-- PAYMENT BALIK LAGI -->
 <section class="payment">
 
 <h2>Payment Method 💳</h2>
@@ -240,11 +286,11 @@ A cute and unique keychain made from shrink paper, customizable with your favori
 
 <section class="contact">
 
-<h2>Contact Us</h2>
+<h2>📞 Contact Us</h2>
 
 <div class="contact-links">
-<a href="https://wa.me/628119440058">WhatsApp</a>
-<a href="https://www.instagram.com/lumoracharms.co?igsh=NGtrcGo1b2Zpc2gz">Instagram</a>
+<a href="https://wa.me/628119440058">📱 WhatsApp</a>
+<a href="https://www.instagram.com/lumoracharms.co?igsh=NGtrcGo1b2Zpc2gz">📷 Instagram</a>
 </div>
 
 </section>
@@ -259,19 +305,14 @@ document.getElementById("qty").value=qty;
 document.getElementById("total").innerText=qty*price;
 }
 
-function hideAll(){
-document.getElementById("qris-box").style.display="none";
+function toggleQRIS(){
+document.getElementById("qris-box").style.display="block";
 document.getElementById("cash-box").style.display="none";
 }
 
-function toggleQRIS(){
-hideAll();
-document.getElementById("qris-box").style.display="block";
-}
-
 function toggleCash(){
-hideAll();
 document.getElementById("cash-box").style.display="block";
+document.getElementById("qris-box").style.display="none";
 }
 
 function sendWA(){
@@ -281,21 +322,12 @@ let total=document.getElementById("total").innerText;
 let notes=document.getElementById("notes").value;
 let contact=document.getElementById("contact").value;
 
-let b1=document.querySelector('input[name="b1"]:checked');
-let b2=document.querySelector('input[name="b2"]:checked');
-
-b1=b1?b1.value:"-";
-b2=b2?b2.value:"-";
-
 let message=
 `✨ *ORDER LUMORA KEYCHAIN* ✨
 
 👤 Name: ${name}
 🔢 Qty: ${qty}
 💰 Total: Rp${total}
-
-🎀 Beads A: ${b1}
-🎀 Beads B: ${b2}
 
 📝 Notes: ${notes}
 📱 Contact: ${contact}`;
