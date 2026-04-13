@@ -10,210 +10,212 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
-body{background:#ffd6e0;}
+body{
+  background:#ffd6e0;
+}
 
 /* NAV */
-.navbar{padding:20px;background:#ffd6e0;}
-.logo{width:60px;border-radius:50%;}
+.navbar{
+  padding:20px;
+  background:#ffd6e0;
+}
+
+.logo{
+  width:60px;
+  border-radius:50%;
+}
 
 /* HERO */
 .hero{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:80px 60px;
-background:url('background.jpg') center/cover no-repeat;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:80px 60px;
+  background:url('background.jpg') center/cover no-repeat;
 }
 
-.hero-text{max-width:50%;color:black;}
+.hero-text{
+  max-width:50%;
+  color:black;
+}
 
 .price{
-font-size:1.5rem;
-font-weight:bold;
-margin:10px 0;
+  font-size:1.5rem;
+  font-weight:bold;
+  margin:10px 0;
 }
 
 .desc{
-color:black;
-font-weight:600;
-margin:25px 0;
-line-height:1.6;
+  color:black;
+  font-weight:600;
+  margin:25px 0;
+  line-height:1.6;
 }
 
 .cta-btn{
-margin-top:30px;
-padding:12px 25px;
-background:#ff4d6d;
-color:white;
-border-radius:30px;
-text-decoration:none;
+  margin-top:30px;
+  padding:12px 25px;
+  background:#ff4d6d;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
 }
 
-/* SLIDE */
+/* ANIMATION */
 @keyframes slideInRight{
-0%{transform:translateX(100%);opacity:0;}
-100%{transform:translateX(0);opacity:1;}
+  0%{transform:translateX(100%);opacity:0;}
+  100%{transform:translateX(0);opacity:1;}
 }
 
-/* RGB */
 @keyframes rgbGlow{
-0%{box-shadow:0 0 15px red;}
-25%{box-shadow:0 0 15px blue;}
-50%{box-shadow:0 0 15px green;}
-75%{box-shadow:0 0 15px purple;}
-100%{box-shadow:0 0 15px red;}
+  0%{box-shadow:0 0 15px red;}
+  25%{box-shadow:0 0 15px blue;}
+  50%{box-shadow:0 0 15px green;}
+  75%{box-shadow:0 0 15px purple;}
+  100%{box-shadow:0 0 15px red;}
 }
 
 .hero-image{
-width:40%;
-animation:slideInRight 1s ease-out;
+  width:40%;
+  animation:slideInRight 1s ease-out;
 }
 
 .glow-box{
-padding:10px;
-border-radius:20px;
-animation:rgbGlow 3s infinite;
+  padding:10px;
+  border-radius:20px;
+  animation:rgbGlow 3s infinite;
 }
 
 .hero-image img{
-width:100%;
-border-radius:15px;
+  width:100%;
+  border-radius:15px;
 }
 
 /* ORDER */
 .order-section{
-padding:80px 60px;
-background:white;
-border-radius:40px 40px 0 0;
+  padding:80px 60px;
+  background:white;
+  border-radius:40px 40px 0 0;
 }
 
 input,textarea{
-width:100%;
-padding:12px;
-margin:10px 0;
-border-radius:10px;
-border:1px solid #ccc;
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
 }
 
 .total{
-color:#ff4d6d;
-font-weight:bold;
+  color:#ff4d6d;
+  font-weight:bold;
 }
 
 /* GRID */
 .option-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-margin:20px 0;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin:20px 0;
 }
 
 .option-grid label{
-background:#fff;
-padding:10px;
-border-radius:15px;
-cursor:pointer;
+  background:#fff;
+  padding:10px;
+  border-radius:15px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.option-grid label:hover{
+  transform:scale(1.05);
 }
 
 .option-grid img{
-width:100%;
-border-radius:10px;
+  width:100%;
+  border-radius:10px;
 }
 
-.option-grid input{display:none;}
+.option-grid input{
+  display:none;
+}
 
 .option-grid input:checked + img{
-outline:3px solid #ff4d6d;
+  outline:3px solid #ff4d6d;
 }
 
 /* BUTTON */
 .submit-btn{
-margin-top:20px;
-padding:14px;
-width:100%;
-background:#1faa59;
-color:white;
-border:none;
-border-radius:25px;
+  margin-top:20px;
+  padding:14px;
+  width:100%;
+  background:#1faa59;
+  color:white;
+  border:none;
+  border-radius:25px;
+  font-size:1rem;
+  cursor:pointer;
 }
 
-/* PAYMENT */
-.payment{
-padding:80px 60px;
-text-align:center;
-background:white;
-}
-
-.payment-buttons button{
-margin:10px;
-padding:12px 25px;
-background:#ff4d6d;
-color:white;
-border:none;
-border-radius:25px;
-cursor:pointer;
-}
-
-/* CONTACT NEXT LEVEL */
+/* CONTACT */
 .contact{
-padding:150px 60px 120px;
-text-align:center;
+  padding:150px 60px 120px;
+  text-align:center;
 }
 
 .contact h2{
-font-size:2rem;
-margin-bottom:40px;
+  font-size:2rem;
+  margin-bottom:40px;
 }
 
 .contact-links{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
 .contact-links a{
-display:flex;
-align-items:center;
-gap:10px;
-padding:12px 25px;
-background:#ff4d6d;
-color:white;
-border-radius:30px;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
-
-.contact-links a:hover{
-transform:scale(1.05);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 25px;
+  background:#ff4d6d;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
 }
 
 /* FLOAT WA */
 .wa-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:12px;
-border-radius:50%;
-color:white;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:12px;
+  border-radius:50%;
+  color:white;
 }
 
 /* MOBILE */
 @media(max-width:768px){
 .hero{
-flex-direction:column;
-text-align:center;
-padding:60px 20px;
+  flex-direction:column;
+  text-align:center;
+  padding:60px 20px;
 }
 .hero-text,.hero-image{
-max-width:100%;
+  max-width:100%;
 }
-.order-section,.payment,.contact{
-padding:60px 20px;
+.order-section,.contact{
+  padding:60px 20px;
 }
 }
 </style>
@@ -265,25 +267,6 @@ A cute and unique keychain made from shrink paper, customizable with your favori
 
 </section>
 
-<section class="payment">
-
-<h2>Payment Method 💳</h2>
-
-<div class="payment-buttons">
-<button onclick="toggleQRIS()">QRIS</button>
-<button onclick="toggleCash()">Cash</button>
-</div>
-
-<div id="qris-box" class="payment-box">
-<img src="qris.jpeg">
-</div>
-
-<div id="cash-box" class="payment-box">
-<p>Pay upon delivery</p>
-</div>
-
-</section>
-
 <section class="contact">
 
 <h2>📞 Contact Us</h2>
@@ -303,16 +286,6 @@ let qty=document.getElementById("qty").value;
 if(qty<1) qty=1;
 document.getElementById("qty").value=qty;
 document.getElementById("total").innerText=qty*price;
-}
-
-function toggleQRIS(){
-document.getElementById("qris-box").style.display="block";
-document.getElementById("cash-box").style.display="none";
-}
-
-function toggleCash(){
-document.getElementById("cash-box").style.display="block";
-document.getElementById("qris-box").style.display="none";
 }
 
 function sendWA(){
