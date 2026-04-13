@@ -36,12 +36,12 @@ font-weight:bold;
 margin:10px 0;
 }
 
-/* DETAIL JADI HIJAU */
+/* DETAIL FIX: HITAM + BOLD */
 .desc{
-color:#1faa59;
+color:black;
+font-weight:600;
 margin:25px 0;
 line-height:1.6;
-font-weight:500;
 }
 
 .cta-btn{
@@ -53,6 +53,12 @@ border-radius:30px;
 text-decoration:none;
 }
 
+/* SLIDE IN ANIMATION */
+@keyframes slideInRight{
+0%{transform:translateX(100%);opacity:0;}
+100%{transform:translateX(0);opacity:1;}
+}
+
 /* RGB */
 @keyframes rgbGlow{
 0%{box-shadow:0 0 15px red;}
@@ -62,9 +68,21 @@ text-decoration:none;
 100%{box-shadow:0 0 15px red;}
 }
 
-.hero-image{width:40%;}
-.glow-box{padding:10px;border-radius:20px;animation:rgbGlow 3s infinite;}
-.hero-image img{width:100%;border-radius:15px;}
+.hero-image{
+width:40%;
+animation:slideInRight 1s ease-out;
+}
+
+.glow-box{
+padding:10px;
+border-radius:20px;
+animation:rgbGlow 3s infinite;
+}
+
+.hero-image img{
+width:100%;
+border-radius:15px;
+}
 
 /* ORDER */
 .order-section{
@@ -99,11 +117,6 @@ background:#fff;
 padding:10px;
 border-radius:15px;
 cursor:pointer;
-transition:0.3s;
-}
-
-.option-grid label:hover{
-transform:scale(1.05);
 }
 
 .option-grid img{
@@ -126,14 +139,6 @@ background:#1faa59;
 color:white;
 border:none;
 border-radius:25px;
-font-size:1rem;
-cursor:pointer;
-transition:0.3s;
-}
-
-.submit-btn:hover{
-background:#159947;
-transform:scale(1.03);
 }
 
 /* PAYMENT */
@@ -142,28 +147,18 @@ padding:80px 60px;
 text-align:center;
 }
 
-.payment-buttons button{
-margin:10px;
-padding:12px 25px;
-background:#ff4d6d;
-color:white;
-border:none;
-border-radius:25px;
-}
-
-.payment-box{
-display:none;
-margin-top:20px;
-}
-
-.payment-box img{
-width:200px;
-}
-
-/* CONTACT */
+/* CONTACT FIX SPACING */
 .contact{
-padding:120px 60px;
+padding:150px 60px 120px 60px; /* ini fix ketimpa */
 text-align:center;
+}
+
+.contact h2{
+margin-bottom:40px;
+}
+
+.contact-links{
+margin-top:30px;
 }
 
 .contact-links a{
@@ -173,6 +168,7 @@ background:#ff4d6d;
 color:white;
 border-radius:25px;
 text-decoration:none;
+display:inline-block;
 }
 
 /* FLOAT WA */
@@ -256,25 +252,6 @@ A cute and unique keychain made from shrink paper, customizable with your favori
 
 </section>
 
-<section class="payment">
-
-<h2>Payment Options 💳</h2>
-
-<div class="payment-buttons">
-<button onclick="toggleQRIS()">QRIS</button>
-<button onclick="toggleCash()">Cash</button>
-</div>
-
-<div id="qris-box" class="payment-box">
-<img src="qris.jpeg">
-</div>
-
-<div id="cash-box" class="payment-box">
-<p>Pay upon delivery</p>
-</div>
-
-</section>
-
 <section class="contact">
 <h2>Contact Us</h2>
 <div class="contact-links">
@@ -292,14 +269,6 @@ if(qty<1) qty=1;
 document.getElementById("qty").value=qty;
 document.getElementById("total").innerText=qty*price;
 }
-
-function hideAll(){
-document.getElementById("qris-box").style.display="none";
-document.getElementById("cash-box").style.display="none";
-}
-
-function toggleQRIS(){hideAll();document.getElementById("qris-box").style.display="block";}
-function toggleCash(){hideAll();document.getElementById("cash-box").style.display="block";}
 
 function sendWA(){
 let name=document.getElementById("name").value;
