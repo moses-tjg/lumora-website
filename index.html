@@ -5,14 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="icon" type="image/jpeg" href="PP.jpeg">
-
 <title>Lumora Keychain</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
 body{background:#ffd6e0;}
 
 /* NAV */
@@ -26,34 +24,16 @@ padding:80px 60px;
 background:url('background.jpg') center/cover no-repeat;
 }
 
-/* TEXT */
 .hero-text{max-width:50%;color:black;}
-
-.price{
-color:black;
-font-size:1.5rem;
-font-weight:bold;
-margin:10px 0;
-}
-
-/* DETAIL FIX: HITAM + BOLD */
-.desc{
-color:black;
-font-weight:600;
-margin:25px 0;
-line-height:1.6;
-}
+.price{color:black;font-size:1.5rem;font-weight:bold;margin:10px 0;}
+.desc{color:black;font-weight:600;margin:25px 0;line-height:1.6;}
 
 .cta-btn{
-margin-top:30px;
-padding:12px 25px;
-background:#ff4d6d;
-color:white;
-border-radius:30px;
-text-decoration:none;
+margin-top:30px;padding:12px 25px;background:#ff4d6d;
+color:white;border-radius:30px;text-decoration:none;
 }
 
-/* SLIDE IN ANIMATION */
+/* ANIMASI SLIDE */
 @keyframes slideInRight{
 0%{transform:translateX(100%);opacity:0;}
 100%{transform:translateX(0);opacity:1;}
@@ -74,91 +54,80 @@ animation:slideInRight 1s ease-out;
 }
 
 .glow-box{
-padding:10px;
-border-radius:20px;
+padding:10px;border-radius:20px;
 animation:rgbGlow 3s infinite;
 }
 
-.hero-image img{
-width:100%;
-border-radius:15px;
-}
+.hero-image img{width:100%;border-radius:15px;}
 
 /* ORDER */
 .order-section{
-padding:80px 60px;
-background:white;
-border-radius:40px 40px 0 0;
+padding:80px 60px;background:white;border-radius:40px 40px 0 0;
 }
 
 input,textarea{
-width:100%;
-padding:12px;
-margin:10px 0;
-border-radius:10px;
-border:1px solid #ccc;
+width:100%;padding:12px;margin:10px 0;
+border-radius:10px;border:1px solid #ccc;
 }
 
-.total{
-color:#ff4d6d;
-font-weight:bold;
-}
+.total{color:#ff4d6d;font-weight:bold;}
 
 /* GRID */
 .option-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-margin:20px 0;
+display:grid;grid-template-columns:repeat(2,1fr);
+gap:15px;margin:20px 0;
 }
 
 .option-grid label{
-background:#fff;
-padding:10px;
-border-radius:15px;
-cursor:pointer;
+background:#fff;padding:10px;border-radius:15px;cursor:pointer;
 }
 
-.option-grid img{
-width:100%;
-border-radius:10px;
-}
-
+.option-grid img{width:100%;border-radius:10px;}
 .option-grid input{display:none;}
-
-.option-grid input:checked + img{
-outline:3px solid #ff4d6d;
-}
+.option-grid input:checked + img{outline:3px solid #ff4d6d;}
 
 /* BUTTON */
 .submit-btn{
-margin-top:20px;
-padding:14px;
-width:100%;
-background:#1faa59;
-color:white;
-border:none;
-border-radius:25px;
+margin-top:20px;padding:14px;width:100%;
+background:#1faa59;color:white;border:none;border-radius:25px;
 }
 
 /* PAYMENT */
 .payment{
 padding:80px 60px;
 text-align:center;
+background:white;
 }
 
-/* CONTACT FIX SPACING */
+.payment-buttons button{
+margin:10px;
+padding:12px 25px;
+background:#ff4d6d;
+color:white;
+border:none;
+border-radius:25px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.payment-buttons button:hover{
+transform:scale(1.05);
+}
+
+.payment-box{
+display:none;
+margin-top:20px;
+}
+
+.payment-box img{
+width:200px;
+border-radius:10px;
+}
+
+/* CONTACT */
 .contact{
-padding:150px 60px 120px 60px; /* ini fix ketimpa */
+padding:150px 60px 120px 60px;
 text-align:center;
-}
-
-.contact h2{
-margin-bottom:40px;
-}
-
-.contact-links{
-margin-top:30px;
 }
 
 .contact-links a{
@@ -168,7 +137,6 @@ background:#ff4d6d;
 color:white;
 border-radius:25px;
 text-decoration:none;
-display:inline-block;
 }
 
 /* FLOAT WA */
@@ -180,7 +148,6 @@ background:#25D366;
 padding:12px;
 border-radius:50%;
 color:white;
-font-size:18px;
 }
 
 /* MOBILE */
@@ -226,7 +193,6 @@ A cute and unique keychain made from shrink paper, customizable with your favori
 <h2>Order Your Lumora 💖</h2>
 
 <input type="text" id="name" placeholder="Your Name">
-
 <input type="number" id="qty" min="1" value="1" oninput="updateTotal()">
 
 <p class="total">Total: Rp <span id="total">16000</span></p>
@@ -252,12 +218,35 @@ A cute and unique keychain made from shrink paper, customizable with your favori
 
 </section>
 
+<!-- PAYMENT BALIK LAGI -->
+<section class="payment">
+
+<h2>Payment Method 💳</h2>
+
+<div class="payment-buttons">
+<button onclick="toggleQRIS()">QRIS</button>
+<button onclick="toggleCash()">Cash</button>
+</div>
+
+<div id="qris-box" class="payment-box">
+<img src="qris.jpeg">
+</div>
+
+<div id="cash-box" class="payment-box">
+<p>Pay upon delivery</p>
+</div>
+
+</section>
+
 <section class="contact">
+
 <h2>Contact Us</h2>
+
 <div class="contact-links">
 <a href="https://wa.me/628119440058">WhatsApp</a>
 <a href="https://www.instagram.com/lumoracharms.co?igsh=NGtrcGo1b2Zpc2gz">Instagram</a>
 </div>
+
 </section>
 
 <script>
@@ -268,6 +257,21 @@ let qty=document.getElementById("qty").value;
 if(qty<1) qty=1;
 document.getElementById("qty").value=qty;
 document.getElementById("total").innerText=qty*price;
+}
+
+function hideAll(){
+document.getElementById("qris-box").style.display="none";
+document.getElementById("cash-box").style.display="none";
+}
+
+function toggleQRIS(){
+hideAll();
+document.getElementById("qris-box").style.display="block";
+}
+
+function toggleCash(){
+hideAll();
+document.getElementById("cash-box").style.display="block";
 }
 
 function sendWA(){
